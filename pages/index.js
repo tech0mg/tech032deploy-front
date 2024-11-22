@@ -6,7 +6,7 @@ export default function Home() {
   const [getResponse, setGetResponse] = useState('');
 
   const handleGetRequest = async () => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/hello`, {
+    const res = await fetch('https://tech0-gen-8-step3-testapp-py1-4.azurewebsites.net/api/hello', {
       method: 'GET',
     });
     const data = await res.json();
@@ -26,7 +26,7 @@ export default function Home() {
   const handleIdRequest = async (e) => {
     e.preventDefault();
 
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/multiply/${id}`, {
+    const res = await fetch(`https://tech0-gen-8-step3-testapp-py1-4.azurewebsites.net/api/multiply/${id}`, {
       method: 'GET',
     });
     const data = await res.json();
@@ -47,7 +47,7 @@ export default function Home() {
     //入力されたデータをコンソールに表示
     console.log("入力情報:", input);
 
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/echo`, {
+    const res = await fetch('https://tech0-gen-8-step3-testapp-py1-4.azurewebsites.net/api/echo', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
