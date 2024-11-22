@@ -35,10 +35,6 @@ jobs:
           cp -r ./public ./deploy
           cp -r ./.next/static/. ./deploy/.next/static
 
-      - name: List deploy directory
-        run: |
-          ls -r ./deploy
-
    
 
       - name: Zip artifact for deployment
