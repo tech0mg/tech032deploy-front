@@ -36,7 +36,8 @@ jobs:
           cp -r ./.next/static/. ./deploy/.next/static
 
       - name: List deploy directory
-        run: ls -R ./deploy
+        run: |
+          ls -r ./deploy
 
    
 
